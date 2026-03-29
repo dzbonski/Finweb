@@ -16,7 +16,7 @@
         body {
             margin: 0;
             padding: 0;
-            background: radial-gradient(circle at top right, #3a4149 0%, #040811 60%, #000204 100%);
+            background: radial-gradient(farthest-corner at 80% 0%, #4a5568 0%, #2d3748 30%, #040811 85%, #000204 100%);
             color: var(--text-light);
             font-family: 'Inter', sans-serif;
             min-height: 100vh;
@@ -41,10 +41,7 @@
             font-weight: 700;
             font-size: 2.5rem;
             margin-bottom: 2rem;
-            background: linear-gradient(to right, #9ca3af, #f8fafc, #64748b, #ffffff, #9ca3af);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
+            
         }
 
         p {
@@ -81,15 +78,154 @@
             from { opacity: 0; transform: translateY(10px); }
             to { opacity: 1; transform: translateY(0); }
         }
+    
+        
+        .bucket-content {
+            text-align: left;
+            margin-bottom: 3rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .bucket-content h3 {
+            font-family: 'Cinzel', serif;
+            font-size: 1.4rem;
+            margin-top: 3rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .bucket-content p {
+            margin-bottom: 1.2rem;
+            font-size: 1.1rem;
+        }
+
+        .bucket-content ul {
+            margin-bottom: 1.5rem;
+            padding-left: 2rem;
+            list-style-type: none;
+        }
+
+        .bucket-content li {
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+            position: relative;
+        }
+
+        .bucket-content li::before {
+            content: '•';
+            position: absolute;
+            left: -1.5rem;
+            color: #ffffff;
+            text-shadow: 0 0 5px rgba(255,255,255,0.8);
+        }
+
+        .chrome-text, h1, h2, h3, p, li, .subtitle, .disclaimer, .phone, .quote {
+            background: linear-gradient(to bottom right, #ffffff 0%, #f1f5f9 20%, #e2e8f0 45%, #ffffff 50%, #f8fafc 75%, #ffffff 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent !important;
+            text-shadow: 0px 1px 2px rgba(0,0,0,0.5);
+        }
+
+        /* Override links */
+        .menu-item, .btn-enter, .btn-back {
+            background: linear-gradient(to bottom right, #ffffff 0%, #e2e8f0 45%, #ffffff 50%, #f1f5f9 75%, #ffffff 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent !important;
+            text-shadow: 0px 1px 2px rgba(0,0,0,0.5);
+            border-color: #cbd5e1;
+        }
+        
+        .menu-item:hover, .btn-enter:hover, .btn-back:hover {
+            background: linear-gradient(to bottom right, #ffffff 0%, #e2e8f0 45%, #ffffff 50%, #ffffff 60%, #f8fafc 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            text-shadow: 0px 0px 15px rgba(255,255,255,0.8);
+            color: transparent !important;
+            border-color: #ffffff;
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <a href="index.html">
-            <img src="shiny1-logo-clean.png" alt="David Zbonski, LLC Logo" style="max-width: 150px; margin-bottom: 2rem; filter: drop-shadow(0 4px 6px rgba(0,0,0,0.5));">
+            <img src="shiny1-logo-chrome.png" alt="David Zbonski, LLC Logo" style="max-width: 300px; width: 90%; mix-blend-mode: screen;; margin-bottom: 2rem; filter: drop-shadow(0 4px 6px rgba(0,0,0,0.5));">
         </a>
-        <h1>What NOT To Invest In</h1>
-        <p>This section is currently under construction. Please check back later for detailed insights and advice tailored to your financial goals.</p>
+        <h1 class="chrome-text">What Not to Invest In</h1>
+        <div class="bucket-content">
+            <p class="chrome-text">Not everything that may hold or increase in value is actually an investment. Real investing is based on owning pieces of real businesses—corporations that produce goods and services people genuinely need or want. These companies create value, generate profits, and drive the economy forward. That’s what makes them truly productive.</p>
+            <p class="chrome-text">Everything below fails that test. These aren’t investments—they’re speculation.</p>
+
+            <h3 class="chrome-text">Private Funds & Private Placements</h3>
+            <p class="chrome-text">These often get pitched as exclusive or sophisticated, but the reality is far less glamorous:</p>
+            <ul>
+                <li class="chrome-text">Little to no transparency</li>
+                <li class="chrome-text">High fees</li>
+                <li class="chrome-text">Illiquidity</li>
+                <li class="chrome-text">Complex structures you can’t easily evaluate</li>
+            </ul>
+            <p class="chrome-text">If you can’t clearly see what you’re buying, you shouldn’t buy it.</p>
+
+            <h3 class="chrome-text">Pre‑IPO Stock</h3>
+            <p class="chrome-text">Pre‑IPO shares sound exciting, but they are usually worth only one thing:<br>Whatever someone is willing to pay for them—which is often nothing.<br>They are:</p>
+            <ul>
+                <li class="chrome-text">Illiquid</li>
+                <li class="chrome-text">Unregulated</li>
+                <li class="chrome-text">Priced on hype, not fundamentals</li>
+                <li class="chrome-text">Nearly impossible to sell</li>
+            </ul>
+            <p class="chrome-text">Until a company actually goes public, those shares are just paper. My experience has seen dozens of companies give worthless Pre-IPO shares to employees as compensation and then they never go public.</p>
+
+            <h3 class="chrome-text">Anything You Don’t Understand</h3>
+            <p class="chrome-text">If something feels confusing, overly complex, or intentionally vague, that’s not sophistication—it’s a warning sign.<br>A simple rule that protects people from disaster:<br>If you can’t explain it in plain English, don’t invest in it.</p>
+
+            <h3 class="chrome-text">Art</h3>
+            <p class="chrome-text">Art can be beautiful and meaningful, but as an investment?</p>
+            <ul>
+                <li class="chrome-text">Prices are subjective</li>
+                <li class="chrome-text">Markets are thin</li>
+                <li class="chrome-text">Liquidity is low</li>
+                <li class="chrome-text">Valuations are unpredictable</li>
+            </ul>
+            <p class="chrome-text">Buy art because you love it—not because you expect it to fund your retirement.</p>
+
+            <h3 class="chrome-text">Collectibles</h3>
+            <p class="chrome-text">Coins, cards, watches, memorabilia—these can be fun hobbies, but they are not investments.<br>Their value depends on:</p>
+            <ul>
+                <li class="chrome-text">Trends</li>
+                <li class="chrome-text">Fads</li>
+                <li class="chrome-text">Condition</li>
+                <li class="chrome-text">Rarity</li>
+                <li class="chrome-text">Finding the right buyer at the right time</li>
+            </ul>
+            <p class="chrome-text">That’s speculation, not wealth‑building.</p>
+
+            <h3 class="chrome-text">A House (as an “investment”)</h3>
+            <p class="chrome-text">A home is a place to live, not a guaranteed financial win.<br>Yes, real estate can appreciate, but:</p>
+            <ul>
+                <li class="chrome-text">It’s expensive to maintain</li>
+                <li class="chrome-text">It’s highly illiquid</li>
+                <li class="chrome-text">It concentrates your risk</li>
+                <li class="chrome-text">It doesn’t reliably outperform inflation</li>
+            </ul>
+            <p class="chrome-text">Your primary residence is a lifestyle choice—not a retirement strategy.</p>
+
+            <h3 class="chrome-text">Gold, Silver, Platinum</h3>
+            <p class="chrome-text">Precious metals have a role as a hedge, but they are not productive assets.<br>They:</p>
+            <ul>
+                <li class="chrome-text">Produce no income</li>
+                <li class="chrome-text">Don’t compound</li>
+                <li class="chrome-text">Can be volatile</li>
+                <li class="chrome-text">Often underperform stocks over long periods</li>
+            </ul>
+            <p class="chrome-text">They might protect wealth; they don’t build it. Of the three, the only one that has fairly consistently held up to inflation has been gold.</p>
+
+            <h3 class="chrome-text">Real investing means owning productive assets</h3>
+            <p class="chrome-text">Businesses that create value in the real world. If something doesn’t produce anything, doesn’t generate cash flow, or relies on hype, scarcity, or finding a “greater fool,” it’s not investing. It’s gambling.<br>My goal is to help you build real, lasting wealth by focusing on what works and avoiding the traps that don’t.<br>If you want help building a smart, sustainable investment plan, I’m here for you.</p>
+        </div>
         <a href="indexpage1.html" class="btn-back">Back to Menu</a>
     </div>
 </body>

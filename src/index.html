@@ -17,7 +17,7 @@
         body {
             margin: 0;
             padding: 0;
-            background: radial-gradient(circle at top right, #3a4149 0%, #040811 60%, #000204 100%);
+            background: radial-gradient(farthest-corner at 80% 0%, #4a5568 0%, #2d3748 30%, #040811 85%, #000204 100%);
             color: var(--text-light);
             font-family: 'Inter', sans-serif;
             min-height: 100vh;
@@ -37,8 +37,7 @@
             animation: fadeIn 1.2s ease-out;
         }
 
-        .logo-img {
-            max-width: 250px;
+        .logo-img { max-width: 500px; width: 90%; mix-blend-mode: screen;
             margin-bottom: 1.5rem;
             filter: drop-shadow(0 4px 6px rgba(0,0,0,0.5));
         }
@@ -52,10 +51,7 @@
             font-weight: 700;
             font-size: 1.75rem; 
             letter-spacing: 2px; 
-            background: linear-gradient(to right, #9ca3af, #f8fafc, #64748b, #ffffff, #9ca3af);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
+            
         }
 
         h2 { 
@@ -140,32 +136,60 @@
             from { opacity: 0; transform: translateY(20px); filter: blur(10px); }
             to { opacity: 1; transform: translateY(0); filter: blur(0); }
         }
+    
+        
+        .chrome-text, h1, h2, p, .subtitle, .disclaimer, .phone, .quote {
+            background: linear-gradient(to bottom right, #ffffff 0%, #f1f5f9 20%, #e2e8f0 45%, #ffffff 50%, #f8fafc 75%, #ffffff 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent !important;
+            text-shadow: 0px 1px 2px rgba(0,0,0,0.5);
+        }
+
+        /* Override links */
+        .menu-item, .btn-enter, .btn-back {
+            background: linear-gradient(to bottom right, #ffffff 0%, #e2e8f0 45%, #ffffff 50%, #f1f5f9 75%, #ffffff 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent !important;
+            text-shadow: 0px 1px 2px rgba(0,0,0,0.5);
+            border-color: #cbd5e1;
+        }
+        
+        .menu-item:hover, .btn-enter:hover, .btn-back:hover {
+            background: linear-gradient(to bottom right, #ffffff 0%, #e2e8f0 45%, #ffffff 50%, #ffffff 60%, #f8fafc 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            text-shadow: 0px 0px 15px rgba(255,255,255,0.8);
+            color: transparent !important;
+            border-color: #ffffff;
+        }
     </style>
 </head>
 <body>
     <div class="container">
-        <img src="shiny1-logo-clean.png" alt="David Zbonski, LLC Logo" class="logo-img">
+        <img src="shiny1-logo-chrome.png" alt="David Zbonski, LLC Logo" class="logo-img">
         
-        <h1>David Zbonski, LLC</h1>
-        <h2>Registered Investment Advisor</h2>
+        <h1 class="chrome-text">David Zbonski, LLC</h1>
+        <h2 class="chrome-text">Registered Investment Advisor</h2>
                 <div class="content">
             <div class="quote">
-                <p>Without a plan, you don't know where you will end up.</p>
-                <p>With a plan, you know where you are going.</p>
+                <p class="chrome-text">Without a plan, you don't know where you will end up.</p>
+                <p class="chrome-text">With a plan, you know where you are going.</p>
             </div>
             
-            <p class="contact-prompt">Call to get help creating a plan. Small starts are OK.</p>
+            <p class="chrome-text" class="contact-prompt">Call to get help creating a plan. Small starts are OK.</p>
             <canvas id="phoneCanvas" width="300" height="60" style="margin: 1rem 0 2.5rem 0; display: block; margin-left: auto; margin-right: auto;"></canvas>
         <script>
             const canvas = document.getElementById('phoneCanvas');
             const ctx = canvas.getContext('2d');
             ctx.font = '700 28px Cinzel, serif';
             let gradient = ctx.createLinearGradient(0, 0, canvas.width, 0);
-            gradient.addColorStop(0, "#9ca3af");
-            gradient.addColorStop(0.25, "#f8fafc");
-            gradient.addColorStop(0.5, "#64748b");
-            gradient.addColorStop(0.75, "#ffffff");
-            gradient.addColorStop(1, "#9ca3af");
+            gradient.addColorStop(0, "#ffffff");
+            gradient.addColorStop(0.25, "#f1f5f9");
+            gradient.addColorStop(0.5, "#ffffff");
+            gradient.addColorStop(0.75, "#e2e8f0");
+            gradient.addColorStop(1, "#ffffff");
             ctx.fillStyle = gradient;
             ctx.textAlign = 'center';
             ctx.textBaseline = 'middle';

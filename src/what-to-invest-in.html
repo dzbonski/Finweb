@@ -16,7 +16,7 @@
         body {
             margin: 0;
             padding: 0;
-            background: radial-gradient(circle at top right, #3a4149 0%, #040811 60%, #000204 100%);
+            background: radial-gradient(farthest-corner at 80% 0%, #4a5568 0%, #2d3748 30%, #040811 85%, #000204 100%);
             color: var(--text-light);
             font-family: 'Inter', sans-serif;
             min-height: 100vh;
@@ -41,10 +41,7 @@
             font-weight: 700;
             font-size: 2.5rem;
             margin-bottom: 2rem;
-            background: linear-gradient(to right, #9ca3af, #f8fafc, #64748b, #ffffff, #9ca3af);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
+            
         }
 
         p {
@@ -81,15 +78,169 @@
             from { opacity: 0; transform: translateY(10px); }
             to { opacity: 1; transform: translateY(0); }
         }
+    
+        
+        .bucket-content {
+            text-align: left;
+            margin-bottom: 3rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .bucket-content h3 {
+            font-family: 'Cinzel', serif;
+            font-size: 1.4rem;
+            margin-top: 3rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .bucket-content p {
+            margin-bottom: 1.2rem;
+            font-size: 1.1rem;
+        }
+
+        .bucket-content ul {
+            margin-bottom: 1.5rem;
+            padding-left: 2rem;
+            list-style-type: none;
+        }
+
+        .bucket-content li {
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+            position: relative;
+        }
+
+        .bucket-content li::before {
+            content: '•';
+            position: absolute;
+            left: -1.5rem;
+            color: #ffffff;
+            text-shadow: 0 0 5px rgba(255,255,255,0.8);
+        }
+
+        .chrome-text, h1, h2, h3, p, li, .subtitle, .disclaimer, .phone, .quote {
+            background: linear-gradient(to bottom right, #ffffff 0%, #f1f5f9 20%, #e2e8f0 45%, #ffffff 50%, #f8fafc 75%, #ffffff 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent !important;
+            text-shadow: 0px 1px 2px rgba(0,0,0,0.5);
+        }
+
+        /* Override links */
+        .menu-item, .btn-enter, .btn-back {
+            background: linear-gradient(to bottom right, #ffffff 0%, #e2e8f0 45%, #ffffff 50%, #f1f5f9 75%, #ffffff 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent !important;
+            text-shadow: 0px 1px 2px rgba(0,0,0,0.5);
+            border-color: #cbd5e1;
+        }
+        
+        .menu-item:hover, .btn-enter:hover, .btn-back:hover {
+            background: linear-gradient(to bottom right, #ffffff 0%, #e2e8f0 45%, #ffffff 50%, #ffffff 60%, #f8fafc 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            text-shadow: 0px 0px 15px rgba(255,255,255,0.8);
+            color: transparent !important;
+            border-color: #ffffff;
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <a href="index.html">
-            <img src="shiny1-logo-clean.png" alt="David Zbonski, LLC Logo" style="max-width: 150px; margin-bottom: 2rem; filter: drop-shadow(0 4px 6px rgba(0,0,0,0.5));">
+            <img src="shiny1-logo-chrome.png" alt="David Zbonski, LLC Logo" style="max-width: 300px; width: 90%; mix-blend-mode: screen;; margin-bottom: 2rem; filter: drop-shadow(0 4px 6px rgba(0,0,0,0.5));">
         </a>
-        <h1>What To Invest In</h1>
-        <p>This section is currently under construction. Please check back later for detailed insights and advice tailored to your financial goals.</p>
+        <h1 class="chrome-text" style="margin-bottom: 1rem;">What to Invest In</h1>
+        <div class="bucket-content">
+            <h2 class="chrome-text" style="text-align:center; font-size:1.3rem; margin-top:-0.5rem; margin-bottom: 3rem; font-weight: 400; letter-spacing: 1px;">(The Things That Actually Build Wealth)</h2>
+            <p class="chrome-text">Real investing isn’t about hype, shortcuts, or chasing the next big thing. It’s about putting your money into productive assets — things that create value, generate income, and grow over time. These are the foundations of long‑term financial success.</p>
+            <p class="chrome-text">Here’s what truly belongs in your investment plan.</p>
+
+            <h3 class="chrome-text">1. Yourself</h3>
+            <p class="chrome-text">Your education, your skills, your health — these are the highest‑return investments you will ever make.</p>
+            <ul>
+                <li class="chrome-text">Learn continuously</li>
+                <li class="chrome-text">Stay healthy</li>
+                <li class="chrome-text">Build expertise</li>
+                <li class="chrome-text">Improve your earning power</li>
+            </ul>
+            <p class="chrome-text">No market crash can take these away from you.</p>
+
+            <h3 class="chrome-text">2. Your Own Business (Any Business)</h3>
+            <p class="chrome-text">You don’t need to build the next Apple. You just need to learn how to run something.</p>
+            <ul>
+                <li class="chrome-text">Start small</li>
+                <li class="chrome-text">Make mistakes</li>
+                <li class="chrome-text">Fix them</li>
+                <li class="chrome-text">Keep going</li>
+            </ul>
+            <p class="chrome-text">Owning a business teaches discipline, problem‑solving, and resilience — skills that compound for life.</p>
+            <p class="chrome-text">And here’s the part most people overlook:<br>Business owners get tax advantages that employees simply don’t.<br>When you run a business, many of the things you need to operate become legitimate business expenses:</p>
+            <ul>
+                <li class="chrome-text">Part of your phone bill</li>
+                <li class="chrome-text">Part of your internet</li>
+                <li class="chrome-text">Office supplies</li>
+                <li class="chrome-text">Software</li>
+                <li class="chrome-text">Equipment</li>
+                <li class="chrome-text">Travel for business</li>
+                <li class="chrome-text">Professional education</li>
+                <li class="chrome-text">Even part of your home (home office deduction)</li>
+            </ul>
+            <p class="chrome-text">These aren’t loopholes — they’re the rules.<br>And they allow you to build something valuable while reducing your tax burden.<br>Starting a business is one of the most powerful wealth‑building tools available to ordinary people.</p>
+
+            <h3 class="chrome-text">3. Total Market Index Funds</h3>
+            <p class="chrome-text">This is the simplest, most powerful investment most people will ever make.</p>
+            <ul>
+                <li class="chrome-text">You own thousands of companies at once</li>
+                <li class="chrome-text">You capture the entire U.S. economy</li>
+                <li class="chrome-text">You get automatic diversification</li>
+                <li class="chrome-text">You benefit from long‑term growth</li>
+            </ul>
+            <p class="chrome-text">This is the core of a smart portfolio.</p>
+
+            <h3 class="chrome-text">4. S&P 500 Index Funds / Equivalent Mutual Funds</h3>
+            <p class="chrome-text">If you want something slightly more focused, large‑cap index funds are a great option. The S&P500.</p>
+            <ul>
+                <li class="chrome-text">It tracks America’s biggest, most stable companies</li>
+                <li class="chrome-text">It is low‑cost</li>
+                <li class="chrome-text">and tax‑efficient</li>
+                <li class="chrome-text">They’re easy to understand</li>
+                <li class="chrome-text">It is automatically adjusted each year. The top 500 stay in the list, growing and producing. If a company goes into decline, it falls off the list and a new one joins.</li>
+            </ul>
+            <p class="chrome-text">These funds rise and fall with the U.S. economy — and the U.S. economy has grown for over a century.</p>
+
+            <h3 class="chrome-text" style="font-size:1.6rem; text-align:center; padding-top:2rem;">A Critical Reminder: These WILL Lose Value at Times</h3>
+            <p class="chrome-text">Every productive investment goes through downturns. That’s normal. That’s expected. That’s part of the process.<br><strong class="chrome-text" style="text-transform:uppercase; font-family:'Cinzel', serif; font-size:1.3rem;">do not sell</strong><br>Selling during a drop is how people turn temporary declines into permanent losses.</p>
+
+            <h3 class="chrome-text" style="font-size:1.6rem; text-align:center; padding-top:1rem;">The S&P 500: Proof That Recovery Is the Rule, Not the Exception</h3>
+            <p class="chrome-text">Look at the long‑term chart of the S&P 500. You’ll see:</p>
+            <ul>
+                <li class="chrome-text">Sharp drops</li>
+                <li class="chrome-text">Scary headlines</li>
+                <li class="chrome-text">Recessions</li>
+                <li class="chrome-text">Crashes</li>
+                <li class="chrome-text">Bear markets</li>
+            </ul>
+            <p class="chrome-text">And then — every single time — recovery.<br>Not only recovery, but new highs.</p>
+            <p class="chrome-text">The pattern is unmistakable:<br><strong class="chrome-text">Short‑term pain. Long‑term growth.</strong></p>
+            <p class="chrome-text">When the market is down, I consider it “on sale.” If I can, I put more money in — not less.<br>Because downturns are temporary, but the growth that follows is permanent.<br>This is why disciplined investors win.</p>
+            <p class="chrome-text">Notice that I do not recommend playing with individual stocks. I suggest leaving that to professionals who can watch them every day and take appropriate action swiftly if it is needed.</p>
+            
+            <h3 class="chrome-text" style="font-size:1.5rem; text-align:center; padding-top:2rem;">Invest in things that are productive, diversified, and built to last:</h3>
+            <ol style="text-align: left; margin-bottom: 2rem; padding-left: 2rem;">
+                <li class="chrome-text" style="margin-bottom: 0.5rem; font-size: 1.1rem;">Yourself</li>
+                <li class="chrome-text" style="margin-bottom: 0.5rem; font-size: 1.1rem;">Your skills and health</li>
+                <li class="chrome-text" style="margin-bottom: 0.5rem; font-size: 1.1rem;">Your own business (with real tax advantages)</li>
+                <li class="chrome-text" style="margin-bottom: 0.5rem; font-size: 1.1rem;">Total market index funds</li>
+                <li class="chrome-text" style="margin-bottom: 0.5rem; font-size: 1.1rem;">Large index funds and mutual funds</li>
+            </ol>
+            <p class="chrome-text">These are the assets that build real wealth — slowly, steadily, and reliably.</p>
+            <p class="chrome-text">If you want help building a plan around these principles, I’m here for you. Whether you’re starting with a little or a lot, the goal is the same: your financial success.</p>
+        </div>
         <a href="indexpage1.html" class="btn-back">Back to Menu</a>
     </div>
 </body>

@@ -16,7 +16,7 @@
         body {
             margin: 0;
             padding: 0;
-            background: radial-gradient(circle at top right, #3a4149 0%, #040811 60%, #000204 100%);
+            background: radial-gradient(farthest-corner at 80% 0%, #4a5568 0%, #2d3748 30%, #040811 85%, #000204 100%);
             color: var(--text-light);
             font-family: 'Inter', sans-serif;
             min-height: 100vh;
@@ -41,10 +41,7 @@
             font-weight: 700;
             font-size: 2.5rem;
             margin-bottom: 2rem;
-            background: linear-gradient(to right, #9ca3af, #f8fafc, #64748b, #ffffff, #9ca3af);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
+            
         }
 
         p {
@@ -81,15 +78,153 @@
             from { opacity: 0; transform: translateY(10px); }
             to { opacity: 1; transform: translateY(0); }
         }
+    
+        
+        .bucket-content {
+            text-align: left;
+            margin-bottom: 3rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .bucket-content h3 {
+            font-family: 'Cinzel', serif;
+            font-size: 1.4rem;
+            margin-top: 3rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .bucket-content p {
+            margin-bottom: 1.2rem;
+            font-size: 1.1rem;
+        }
+
+        .bucket-content ul {
+            margin-bottom: 1.5rem;
+            padding-left: 2rem;
+            list-style-type: none;
+        }
+
+        .bucket-content li {
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+            position: relative;
+        }
+
+        .bucket-content li::before {
+            content: '•';
+            position: absolute;
+            left: -1.5rem;
+            color: #ffffff;
+            text-shadow: 0 0 5px rgba(255,255,255,0.8);
+        }
+
+        .chrome-text, h1, h2, h3, p, li, .subtitle, .disclaimer, .phone, .quote {
+            background: linear-gradient(to bottom right, #ffffff 0%, #f1f5f9 20%, #e2e8f0 45%, #ffffff 50%, #f8fafc 75%, #ffffff 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent !important;
+            text-shadow: 0px 1px 2px rgba(0,0,0,0.5);
+        }
+
+        /* Override links */
+        .menu-item, .btn-enter, .btn-back {
+            background: linear-gradient(to bottom right, #ffffff 0%, #e2e8f0 45%, #ffffff 50%, #f1f5f9 75%, #ffffff 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent !important;
+            text-shadow: 0px 1px 2px rgba(0,0,0,0.5);
+            border-color: #cbd5e1;
+        }
+        
+        .menu-item:hover, .btn-enter:hover, .btn-back:hover {
+            background: linear-gradient(to bottom right, #ffffff 0%, #e2e8f0 45%, #ffffff 50%, #ffffff 60%, #f8fafc 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            text-shadow: 0px 0px 15px rgba(255,255,255,0.8);
+            color: transparent !important;
+            border-color: #ffffff;
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <a href="index.html">
-            <img src="shiny1-logo-clean.png" alt="David Zbonski, LLC Logo" style="max-width: 150px; margin-bottom: 2rem; filter: drop-shadow(0 4px 6px rgba(0,0,0,0.5));">
+            <img src="shiny1-logo-chrome.png" alt="David Zbonski, LLC Logo" style="max-width: 300px; width: 90%; mix-blend-mode: screen;; margin-bottom: 2rem; filter: drop-shadow(0 4px 6px rgba(0,0,0,0.5));">
         </a>
-        <h1>Where To Invest</h1>
-        <p>This section is currently under construction. Please check back later for detailed insights and advice tailored to your financial goals.</p>
+        <h1 class="chrome-text">The Smart Order of Investing: Your Bucket Strategy</h1>
+        <div class="bucket-content">
+            <p class="chrome-text">Building wealth isn’t about guessing or gambling. It’s about putting your dollars in the right places, in the right order, so every contribution works as hard as possible for your future. Over decades of investing—and helping others do the same—I’ve learned that sequence matters.</p>
+            <p class="chrome-text">Here’s the simple, powerful “bucket” system I teach to anyone starting their financial journey.</p>
+
+            <h3 class="chrome-text">Pre-cursor/Bucket #1: An emergency cash fund</h3>
+            <p class="chrome-text">This doesn’t have to be enormous, but you should have cash and/or credit to use in the event you need funds immediately. (My car broke down or my furnace went out.)</p>
+
+            <h3 class="chrome-text">Bucket #2 — Free Money: Employer Matches</h3>
+            <p class="chrome-text">If someone is willing to match your contributions, that’s free money. No investment on earth consistently beats a 100% instant return.</p>
+            <ul>
+                <li class="chrome-text">Contribute at least enough to get the full match</li>
+                <li class="chrome-text">This is your highest-priority bucket, always</li>
+            </ul>
+            <p class="chrome-text">Skipping a match is like refusing a raise.</p>
+
+            <h3 class="chrome-text">Bucket #3 — Roth IRA: The Magic Account</h3>
+            <p class="chrome-text">Roth IRAs are one of the most powerful tools available to everyday investors. You contribute after-tax dollars, and then:</p>
+            <ul>
+                <li class="chrome-text">Your money grows tax-free</li>
+                <li class="chrome-text">Your withdrawals in retirement are tax-free</li>
+                <li class="chrome-text">You control the investments</li>
+                <li class="chrome-text">You’re not forced to withdraw at a certain age</li>
+            </ul>
+            <p class="chrome-text">Tax-free growth over decades is life-changing. Max it out every year if you can.</p>
+
+            <h3 class="chrome-text">Bucket #4 — HSA: The Triple-Tax Advantage</h3>
+            <p class="chrome-text">A Health Savings Account (HSA) is often misunderstood, but it’s one of the most efficient accounts in existence.</p>
+            <ul>
+                <li class="chrome-text">Tax-deductible contributions</li>
+                <li class="chrome-text">Tax-free growth</li>
+                <li class="chrome-text">Tax-free withdrawals for medical expenses</li>
+            </ul>
+            <p class="chrome-text">This is not the same as a Flexible Spending Account (FSA). FSAs are useful for predictable yearly expenses, but HSAs can be invested and carried forward for life.<br>It’s the only account with all three tax advantages.</p>
+
+            <h3 class="chrome-text">Bucket #5 — 401(k) or 403(b): Preferably Roth</h3>
+            <p class="chrome-text">After filling the first three buckets, return to your workplace plan and continue building long-term wealth.</p>
+            <p class="chrome-text">If your employer offers a Roth 401(k)/403(b) option, use it if it fits your tax situation. You get:</p>
+            <ul>
+                <li class="chrome-text">Higher contribution limits than a Roth IRA</li>
+                <li class="chrome-text">Tax-free withdrawals in retirement</li>
+                <li class="chrome-text">Automatic payroll contributions</li>
+            </ul>
+            <p class="chrome-text">This is where consistent, disciplined investing compounds into real wealth.</p>
+
+            <h3 class="chrome-text">Bucket #6 — Cash & Taxable Brokerage Accounts</h3>
+            <p class="chrome-text">Once your tax-advantaged buckets are filled, it’s time to build flexibility.</p>
+            <ul>
+                <li class="chrome-text">Emergency savings (A certain amount of this is actually item #1.)</li>
+                <li class="chrome-text">Short-term goals</li>
+                <li class="chrome-text">Long-term taxable investing</li>
+                <li class="chrome-text">Side accounts for opportunities</li>
+            </ul>
+            <p class="chrome-text">Liquidity gives you freedom. Taxable accounts also allow for tax-loss harvesting and no withdrawal restrictions. This is especially valuable for people who want to stop working early or use their “FU” money. Note that for early retirement, there are often ways to tap your retirement accounts well before age 55. If early retirement is your goal, this may be bucket #3 or 4.</p>
+
+            <h3 class="chrome-text">Bucket #7 — 529 Plans: Education Savings (Use With Care)</h3>
+            <p class="chrome-text">529 plans allow your money to grow tax-free when used for qualified education expenses.</p>
+            <p class="chrome-text">If you know you’ll have education expenses, this bucket can save you thousands in taxes. You do not have to have the money in there for a specific period of time. Just ensure that if your goals are short term, that you do not put your money in the stock market. Use high yield savings or stable bonds.</p>
+
+            <h3 class="chrome-text">This bucket system gives you a clear, repeatable roadmap:</h3>
+            <ol style="text-align: left; margin-bottom: 2rem; padding-left: 2rem;">
+                <li class="chrome-text" style="margin-bottom: 0.5rem; font-size: 1.1rem;">Capture free money</li>
+                <li class="chrome-text" style="margin-bottom: 0.5rem; font-size: 1.1rem;">Maximize tax-free growth</li>
+                <li class="chrome-text" style="margin-bottom: 0.5rem; font-size: 1.1rem;">Protect your future health costs</li>
+                <li class="chrome-text" style="margin-bottom: 0.5rem; font-size: 1.1rem;">Build long-term retirement wealth</li>
+                <li class="chrome-text" style="margin-bottom: 0.5rem; font-size: 1.1rem;">Maintain flexibility</li>
+                <li class="chrome-text" style="margin-bottom: 0.5rem; font-size: 1.1rem;">Prepare for education expenses</li>
+            </ol>
+            <p class="chrome-text">This is a solid order that helps your money grow efficiently and sustainably.</p>
+            <p class="chrome-text">If you want help building your own bucket plan—or figuring out where to start—I’m here for you. Whether you’re beginning with $50 or $500,000, the goal is the same: your financial success, defined your way.</p>
+        </div>
         <a href="indexpage1.html" class="btn-back">Back to Menu</a>
     </div>
 </body>

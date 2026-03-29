@@ -17,7 +17,7 @@
         body {
             margin: 0;
             padding: 0;
-            background: radial-gradient(circle at top right, #3a4149 0%, #040811 60%, #000204 100%);
+            background: radial-gradient(farthest-corner at 80% 0%, #4a5568 0%, #2d3748 30%, #040811 85%, #000204 100%);
             color: var(--text-light);
             font-family: 'Inter', sans-serif;
             min-height: 100vh;
@@ -34,8 +34,7 @@
             background: transparent; border-bottom: none;
         }
 
-        .logo-img {
-            max-width: 180px;
+        .logo-img { max-width: 500px; width: 90%; mix-blend-mode: screen;
             transition: transform 0.3s ease;
         }
 
@@ -134,28 +133,56 @@
                 grid-template-columns: 1fr;
             }
         }
+    
+        
+        .chrome-text, h1, h2, p, .subtitle, .disclaimer, .phone, .quote {
+            background: linear-gradient(to bottom right, #ffffff 0%, #f1f5f9 20%, #e2e8f0 45%, #ffffff 50%, #f8fafc 75%, #ffffff 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent !important;
+            text-shadow: 0px 1px 2px rgba(0,0,0,0.5);
+        }
+
+        /* Override links */
+        .menu-item, .btn-enter, .btn-back {
+            background: linear-gradient(to bottom right, #ffffff 0%, #e2e8f0 45%, #ffffff 50%, #f1f5f9 75%, #ffffff 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent !important;
+            text-shadow: 0px 1px 2px rgba(0,0,0,0.5);
+            border-color: #cbd5e1;
+        }
+        
+        .menu-item:hover, .btn-enter:hover, .btn-back:hover {
+            background: linear-gradient(to bottom right, #ffffff 0%, #e2e8f0 45%, #ffffff 50%, #ffffff 60%, #f8fafc 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            text-shadow: 0px 0px 15px rgba(255,255,255,0.8);
+            color: transparent !important;
+            border-color: #ffffff;
+        }
     </style>
 </head>
 <body>
     <header class="header">
         <a href="index.html">
-            <img src="shiny1-logo-clean.png" alt="David Zbonski, LLC Logo" class="logo-img">
+            <img src="shiny1-logo-chrome.png" alt="David Zbonski, LLC Logo" class="logo-img">
         </a>
     </header>
 
     <main class="main-content">
         <div class="menu-grid">
             <a href="who-am-i.html" class="menu-item">Who Am I?</a>
-            <a href="recommendations.html" class="menu-item">My Recommendations</a>
             <a href="where-to-invest.html" class="menu-item">Where To Invest</a>
             <a href="what-to-invest-in.html" class="menu-item">What To Invest In</a>
             <a href="what-not-to-invest.html" class="menu-item">What NOT To Invest In</a>
+            <a href="recommendations.html" class="menu-item">My Recommendations</a>
         </div>
     </main>
 
     <footer class="footer">
-        <p class="disclaimer">
-            <strong>Disclaimer:</strong> This is generic advice. Contact me so that I can help you determine if this path is for you or if modifications are needed for your specific situation.
+        <p class="chrome-text" class="disclaimer">
+            <strong class="chrome-text">Disclaimer:</strong> This is generic advice. Contact me so that I can help you determine if this path is for you or if modifications are needed for your specific situation.
         </p>
     </footer>
 </body>

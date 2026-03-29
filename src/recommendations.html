@@ -16,7 +16,7 @@
         body {
             margin: 0;
             padding: 0;
-            background: radial-gradient(circle at top right, #3a4149 0%, #040811 60%, #000204 100%);
+            background: radial-gradient(farthest-corner at 80% 0%, #4a5568 0%, #2d3748 30%, #040811 85%, #000204 100%);
             color: var(--text-light);
             font-family: 'Inter', sans-serif;
             min-height: 100vh;
@@ -41,10 +41,7 @@
             font-weight: 700;
             font-size: 2.5rem;
             margin-bottom: 2rem;
-            background: linear-gradient(to right, #9ca3af, #f8fafc, #64748b, #ffffff, #9ca3af);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
+            
         }
 
         p {
@@ -81,15 +78,43 @@
             from { opacity: 0; transform: translateY(10px); }
             to { opacity: 1; transform: translateY(0); }
         }
+    
+        
+        .chrome-text, h1, h2, p, .subtitle, .disclaimer, .phone, .quote {
+            background: linear-gradient(to bottom right, #ffffff 0%, #f1f5f9 20%, #e2e8f0 45%, #ffffff 50%, #f8fafc 75%, #ffffff 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent !important;
+            text-shadow: 0px 1px 2px rgba(0,0,0,0.5);
+        }
+
+        /* Override links */
+        .menu-item, .btn-enter, .btn-back {
+            background: linear-gradient(to bottom right, #ffffff 0%, #e2e8f0 45%, #ffffff 50%, #f1f5f9 75%, #ffffff 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent !important;
+            text-shadow: 0px 1px 2px rgba(0,0,0,0.5);
+            border-color: #cbd5e1;
+        }
+        
+        .menu-item:hover, .btn-enter:hover, .btn-back:hover {
+            background: linear-gradient(to bottom right, #ffffff 0%, #e2e8f0 45%, #ffffff 50%, #ffffff 60%, #f8fafc 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            text-shadow: 0px 0px 15px rgba(255,255,255,0.8);
+            color: transparent !important;
+            border-color: #ffffff;
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <a href="index.html">
-            <img src="shiny1-logo-clean.png" alt="David Zbonski, LLC Logo" style="max-width: 150px; margin-bottom: 2rem; filter: drop-shadow(0 4px 6px rgba(0,0,0,0.5));">
+            <img src="shiny1-logo-chrome.png" alt="David Zbonski, LLC Logo" style="max-width: 300px; width: 90%; mix-blend-mode: screen;; margin-bottom: 2rem; filter: drop-shadow(0 4px 6px rgba(0,0,0,0.5));">
         </a>
-        <h1>My Recommendations</h1>
-        <p>This section is currently under construction. Please check back later for detailed insights and advice tailored to your financial goals.</p>
+        <h1 class="chrome-text">My Recommendations</h1>
+        <p class="chrome-text">This section is currently under construction. Please check back later for detailed insights and advice tailored to your financial goals.</p>
         <a href="indexpage1.html" class="btn-back">Back to Menu</a>
     </div>
 </body>
