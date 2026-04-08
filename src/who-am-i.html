@@ -139,8 +139,47 @@
         <a href="indexpage1.html" class="btn-back">Back to Menu</a>
     </div>
 
+    
+    <!-- Contact Section -->
+    <div style="text-align: center; padding: 2rem 0; width: 100%;">
+        <p class="chrome-text" style="font-size: 1.1rem; margin-bottom: 0.5rem; letter-spacing: 1px;">Contact</p>
+        <a href="#" class="contactLink_footer chrome-text" style="text-decoration: underline; color: #cbd5e1; font-size: 1.1rem; cursor: pointer;">Email Me</a>
+        <canvas class="footerPhoneCanvas" width="250" height="40" style="margin: 0.5rem auto 0; display: block;"></canvas>
+        <script>
+            // Bot-protected email
+            document.querySelectorAll('.contactLink_footer').forEach(function(link) {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    var u = 'dave';
+                    var d = 'zbonski.com';
+                    window.location.href = 'mailto:' + u + '@' + d;
+                });
+            });
+            // Canvas phone number rendering
+            document.querySelectorAll('.footerPhoneCanvas').forEach(function(c) {
+                if (c.dataset.rendered) return;
+                const x = c.getContext('2d');
+                x.font = '700 22px Cinzel, serif';
+                let g = x.createLinearGradient(0, 0, c.width, 0);
+                g.addColorStop(0, "#ffffff");
+                g.addColorStop(0.25, "#f1f5f9");
+                g.addColorStop(0.5, "#ffffff");
+                g.addColorStop(0.75, "#e2e8f0");
+                g.addColorStop(1, "#ffffff");
+                x.fillStyle = g;
+                x.textAlign = 'center';
+                x.textBaseline = 'middle';
+                x.shadowColor = 'rgba(255, 255, 255, 0.2)';
+                x.shadowBlur = 6;
+                x.fillText('865 - 855 - 4555', c.width/2, c.height/2);
+                c.dataset.rendered = "true";
+            });
+        </script>
+    </div>
     <footer id="disclosures-footer" style="margin-top: 4rem; padding: 1.5rem 0; width: 100%; text-align: center; background: transparent;">
-        <a href="disclosures.html" style="font-size: 0.8rem; color: #94a3b8; text-decoration: none; font-family: 'Inter', sans-serif; letter-spacing: 1px; transition: color 0.3s ease;">Disclosures & Privacy Policy</a>
+        <a href="disclosures.html" style="font-size: 0.8rem; color: #94a3b8; text-decoration: none; font-family: 'Inter', sans-serif; letter-spacing: 1px; transition: color 0.3s ease;">Disclosures</a>
+        <span style="font-size: 0.8rem; color: #94a3b8; margin: 0 10px;">|</span>
+        <a href="privacy.html" style="font-size: 0.8rem; color: #94a3b8; text-decoration: none; font-family: 'Inter', sans-serif; letter-spacing: 1px; transition: color 0.3s ease;">Privacy Policy</a>
     </footer>
 
 </body>

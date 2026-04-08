@@ -117,7 +117,7 @@
             <a href="indexpage1.html" class="btn-back">Back to Menu</a>
         </div>
 
-                <h1 class="chrome-text" style="margin-bottom: 3rem;">Disclosures & Privacy Policy</h1>
+                <h1 class="chrome-text" style="margin-bottom: 3rem;">Disclosures</h1>
         
         <h2 class="chrome-text" style="font-size: 1.2rem; text-align: left; margin-top: 2rem;">Important Disclaimers</h2>
         <p class="chrome-text" style="text-align: left; font-size: 0.9rem; margin-bottom: 1.5rem;">David Zbonski, LLC ("David Zbonski, LLC") is a Registered Investment Advisor ("RIA"), located in the State of Tennessee. David Zbonski, LLC provides investment advisory and related services for clients nationally. David Zbonski, LLC will maintain all applicable registration and licenses as required by the various states in which David Zbonski, LLC conducts business, as applicable. David Zbonski, LLC renders individualized responses to persons in a particular state only after complying with all regulatory requirements, or pursuant to an applicable state exemption or exclusion.</p>
@@ -143,7 +143,7 @@
         <p class="chrome-text" style="text-align: left; font-size: 0.9rem; margin-bottom: 1.5rem;">We do not respond to "do not track" requests because we do not track you over time or across third party websites to provide targeted advertising. We may track you across our website to help us improve our content.</p>
         <p class="chrome-text" style="text-align: left; font-size: 0.9rem; margin-bottom: 1.5rem;">We may use "cookies" and similar online technologies to keep, and sometimes track, information about you regarding your usage of our website. Cookies are small data files that are sent to your browser or related software from a Web server and stored on your device. Cookies help us to collect information about your usage of our website, including date and time of visits, pages viewed, amount of time spent on our sites, or general information about the device used to access the site, such as the browser used. You can refuse to store or delete cookies by configuring your web browser settings. Most browsers and mobile devices have their own settings to manage cookies. If you refuse a cookie when on our website, or if you delete cookies, you may experience some inconvenience in your use of our website, such as having to re-configure preferences.</p>
         <p class="chrome-text" style="text-align: left; font-size: 0.9rem; margin-bottom: 1.5rem;">When you are on this website you may have the opportunity to click-through to other websites, including websites operated by unaffiliated third parties. These sites may collect nonpublic personal Information about you. We do not control sites operated by these entities and are not responsible for the information practices of these sites. This Privacy Policy does not address the information practices of other websites. The privacy policies of websites operated third parties are located on those sites.</p>
-        <p class="chrome-text" style="text-align: left; font-size: 0.9rem; margin-bottom: 1.5rem;">For a copy of the David Zbonski, LLC Privacy Policy, please Contact Us at info @ zbonski. com (manually type that address in).</p>
+        <p class="chrome-text" style="text-align: left; font-size: 0.9rem; margin-bottom: 1.5rem;">For a copy of the David Zbonski, LLC Privacy Policy, please view our <a href="privacy.html" class="chrome-text" style="text-decoration: underline;">Privacy Policy</a>.</p>
         
         <h2 class="chrome-text" style="font-size: 1.2rem; text-align: left; margin-top: 2rem;">Email Disclosures</h2>
         <p class="chrome-text" style="text-align: left; font-size: 0.9rem; margin-bottom: 1.5rem;">David Zbonski, LLC often communicates with its clients and prospective clients through electronic mail (“email”) and other electronic means. Your privacy and security are very important to us. David Zbonski, LLC makes every effort to ensure that email communications do not contain sensitive information. We remind our clients and others not to send David Zbonski, LLC private information over email. If you have sensitive data to deliver, we can provide secure means for such delivery.</p>
@@ -160,8 +160,47 @@
         <a href="indexpage1.html" class="btn-back">Back to Menu</a>
     </div>
 
+    
+    <!-- Contact Section -->
+    <div style="text-align: center; padding: 2rem 0; width: 100%;">
+        <p class="chrome-text" style="font-size: 1.1rem; margin-bottom: 0.5rem; letter-spacing: 1px;">Contact</p>
+        <a href="#" class="contactLink_footer chrome-text" style="text-decoration: underline; color: #cbd5e1; font-size: 1.1rem; cursor: pointer;">Email Me</a>
+        <canvas class="footerPhoneCanvas" width="250" height="40" style="margin: 0.5rem auto 0; display: block;"></canvas>
+        <script>
+            // Bot-protected email
+            document.querySelectorAll('.contactLink_footer').forEach(function(link) {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    var u = 'dave';
+                    var d = 'zbonski.com';
+                    window.location.href = 'mailto:' + u + '@' + d;
+                });
+            });
+            // Canvas phone number rendering
+            document.querySelectorAll('.footerPhoneCanvas').forEach(function(c) {
+                if (c.dataset.rendered) return;
+                const x = c.getContext('2d');
+                x.font = '700 22px Cinzel, serif';
+                let g = x.createLinearGradient(0, 0, c.width, 0);
+                g.addColorStop(0, "#ffffff");
+                g.addColorStop(0.25, "#f1f5f9");
+                g.addColorStop(0.5, "#ffffff");
+                g.addColorStop(0.75, "#e2e8f0");
+                g.addColorStop(1, "#ffffff");
+                x.fillStyle = g;
+                x.textAlign = 'center';
+                x.textBaseline = 'middle';
+                x.shadowColor = 'rgba(255, 255, 255, 0.2)';
+                x.shadowBlur = 6;
+                x.fillText('865 - 855 - 4555', c.width/2, c.height/2);
+                c.dataset.rendered = "true";
+            });
+        </script>
+    </div>
     <footer id="disclosures-footer" style="margin-top: 4rem; padding: 1.5rem 0; width: 100%; text-align: center; background: transparent;">
-        <a href="disclosures.html" style="font-size: 0.8rem; color: #94a3b8; text-decoration: none; font-family: 'Inter', sans-serif; letter-spacing: 1px; transition: color 0.3s ease;">Disclosures & Privacy Policy</a>
+        <a href="disclosures.html" style="font-size: 0.8rem; color: #94a3b8; text-decoration: none; font-family: 'Inter', sans-serif; letter-spacing: 1px; transition: color 0.3s ease;">Disclosures</a>
+        <span style="font-size: 0.8rem; color: #94a3b8; margin: 0 10px;">|</span>
+        <a href="privacy.html" style="font-size: 0.8rem; color: #94a3b8; text-decoration: none; font-family: 'Inter', sans-serif; letter-spacing: 1px; transition: color 0.3s ease;">Privacy Policy</a>
     </footer>
 
 </body>

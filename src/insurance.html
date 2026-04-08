@@ -126,12 +126,53 @@
 
         <p class="chrome-text" style="text-align: left; margin-bottom: 1.5rem;">The necessity for these disability policies diminishes in direct proportion to your liquid net worth, as the primary objective is to replace income that your assets cannot yet generate. Once your investment portfolio reaches a level of "critical mass" where the annual draw provides for your lifestyle and medical contingencies, the premiums for disability insurance become an unnecessary drag on your wealth.</p>
 
-        <p class="chrome-text" style="text-align: left; margin-bottom: 3rem;">As your assets grow, the focus of your insurance strategy must shift from income replacement to asset protection by significantly increasing your liability coverage. While you may no longer need to insure your life, you must insure your net worth against legal claims, as a single accident can turn a lifetime of wealth development into a target for litigation that could strip away your financial independence.</p>
+        <p class="chrome-text" style="text-align: left; margin-bottom: 1.5rem;">When it comes to long-term care insurance, my preferred strategy is to save and invest enough to self-insure. Traditional long-term care policies are incredibly expensive unless you lock into them extremely early in life and pay premiums for decades. However, it is fundamentally important to be in a solid financial position to deal with the debilitating health issues or injuries that become far more likely as we get older. By building your own wealth, you retain control of those funds to pay for any care you need, rather than paying an insurance company for a benefit you may never use. And also, by being self-insured, YOU determine when you need to use those funds—you don't have to meet the strict criteria of an insurance company.</p>
+
+        <p class="chrome-text" style="text-align: left; margin-bottom: 3rem;">As your assets grow, the focus of your insurance strategy must shift from income replacement to asset protection by significantly increasing your liability coverage. While you may no longer need to insure your life, you must insure your net worth against legal claims, as a single accident can turn a lifetime of wealth development into a target for litigation that could strip away your financial independence. Make sure your auto insurance policy is high enough to protect your wealth. You can also potentially use trusts. Those take a little more effort to set up and maintain, but if you are interested, talk to me about it and I can give you guidance.</p>
         <a href="indexpage1.html" class="btn-back">Back to Menu</a>
     </div>
 
+    
+    <!-- Contact Section -->
+    <div style="text-align: center; padding: 2rem 0; width: 100%;">
+        <p class="chrome-text" style="font-size: 1.1rem; margin-bottom: 0.5rem; letter-spacing: 1px;">Contact</p>
+        <a href="#" class="contactLink_footer chrome-text" style="text-decoration: underline; color: #cbd5e1; font-size: 1.1rem; cursor: pointer;">Email Me</a>
+        <canvas class="footerPhoneCanvas" width="250" height="40" style="margin: 0.5rem auto 0; display: block;"></canvas>
+        <script>
+            // Bot-protected email
+            document.querySelectorAll('.contactLink_footer').forEach(function(link) {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    var u = 'dave';
+                    var d = 'zbonski.com';
+                    window.location.href = 'mailto:' + u + '@' + d;
+                });
+            });
+            // Canvas phone number rendering
+            document.querySelectorAll('.footerPhoneCanvas').forEach(function(c) {
+                if (c.dataset.rendered) return;
+                const x = c.getContext('2d');
+                x.font = '700 22px Cinzel, serif';
+                let g = x.createLinearGradient(0, 0, c.width, 0);
+                g.addColorStop(0, "#ffffff");
+                g.addColorStop(0.25, "#f1f5f9");
+                g.addColorStop(0.5, "#ffffff");
+                g.addColorStop(0.75, "#e2e8f0");
+                g.addColorStop(1, "#ffffff");
+                x.fillStyle = g;
+                x.textAlign = 'center';
+                x.textBaseline = 'middle';
+                x.shadowColor = 'rgba(255, 255, 255, 0.2)';
+                x.shadowBlur = 6;
+                x.fillText('865 - 855 - 4555', c.width/2, c.height/2);
+                c.dataset.rendered = "true";
+            });
+        </script>
+    </div>
     <footer id="disclosures-footer" style="margin-top: 4rem; padding: 1.5rem 0; width: 100%; text-align: center; background: transparent;">
-        <a href="disclosures.html" style="font-size: 0.8rem; color: #94a3b8; text-decoration: none; font-family: 'Inter', sans-serif; letter-spacing: 1px; transition: color 0.3s ease;">Disclosures & Privacy Policy</a>
+        <a href="disclosures.html" style="font-size: 0.8rem; color: #94a3b8; text-decoration: none; font-family: 'Inter', sans-serif; letter-spacing: 1px; transition: color 0.3s ease;">Disclosures</a>
+        <span style="font-size: 0.8rem; color: #94a3b8; margin: 0 10px;">|</span>
+        <a href="privacy.html" style="font-size: 0.8rem; color: #94a3b8; text-decoration: none; font-family: 'Inter', sans-serif; letter-spacing: 1px; transition: color 0.3s ease;">Privacy Policy</a>
     </footer>
 
 </body>
