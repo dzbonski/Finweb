@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More on 529 Plans | David Zbonski, LLC</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #121820;
+            --gold-primary: #cbd5e1;
+            --gold-light: #f8fafc;
+            --text-light: #e2e8f0;
+        }
+        
+        body {
+            margin: 0;
+            padding: 0;
+            background: radial-gradient(farthest-corner at 80% 0%, #4a5568 0%, #2d3748 30%, #040811 85%, #000204 100%);
+            color: var(--text-light);
+            font-family: 'Inter', sans-serif;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background-attachment: fixed;
+        }
+
+        .container {
+            max-width: 800px;
+            width: 90%;
+            padding: 4rem 2rem;
+            background: transparent;
+            animation: fadeIn 1s ease-out;
+        }
+
+        h1 {
+            font-family: 'Cinzel', serif;
+            font-weight: 700;
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            
+        }
+
+        p {
+            font-size: 1.2rem;
+            font-weight: 300;
+            margin-bottom: 3rem;
+            line-height: 1.6;
+            color: #94a3b8;
+        }
+
+        .btn-back {
+            display: inline-block;
+            padding: 1rem 3rem;
+            background: transparent;
+            color: var(--gold-light);
+            text-decoration: none;
+            font-family: 'Cinzel', serif;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border-radius: 4px;
+            border: 1px solid var(--gold-primary);
+            letter-spacing: 2px;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+        }
+
+        .btn-back:hover {
+            background: rgba(203, 213, 225, 0.1);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(203, 213, 225, 0.2);
+        }
+
+        .content-section {
+            text-align: left;
+            margin-bottom: 3rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .content-section p {
+            margin-bottom: 1.5rem;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    
+        .chrome-text, h1, h2, p, .subtitle, .disclaimer, .phone, .quote {
+            background: none;
+            color: #e2e8f0 !important;
+            text-shadow: 0px 1px 2px rgba(0,0,0,0.5);
+        }
+
+        /* Override links */
+        .menu-item, .btn-enter, .btn-back {
+            background: none;
+            color: #e2e8f0 !important;
+            text-shadow: 0px 1px 2px rgba(0,0,0,0.5);
+            border-color: #cbd5e1;
+        }
+        
+        .menu-item:hover, .btn-enter:hover, .btn-back:hover {
+            background: none;
+            text-shadow: 0px 0px 15px rgba(255,255,255,0.8);
+            color: #e2e8f0 !important;
+            border-color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="index.html">
+            <img src="shiny1-logo-chrome.png" alt="David Zbonski, LLC Logo" style="max-width: 300px; width: 90%; mix-blend-mode: screen; margin-bottom: 2rem; filter: drop-shadow(0 4px 6px rgba(0,0,0,0.5));">
+        </a>
+        <h1 class="chrome-text">More on 529 Plans</h1>
+        <div class="content-section">
+            <p class="chrome-text">The major benefit of a 529 plan is that it provides tax-free growth and tax-free withdrawals when used for qualified education expenses. However, these plans are much more flexible than most people realize. Aside from traditional college tuition, 529 funds can be used for room and board, K-12 public, private, and religious school tuition, trade schools, registered apprenticeship programs, and even paying down student loans (up to certain limits). Additionally, qualified education expenses include the purchase of computers, related peripheral equipment, software, and internet access, provided they are to be used primarily by the beneficiary during the years they are enrolled at an eligible educational institution.</p>
+            <p class="chrome-text">If the designated beneficiary decides not to pursue further education or doesn't use all the funds, you won't necessarily lose the money to penalties. You can transfer the 529 plan to another eligible family member, such as a sibling, moving the education benefit where it's needed most. Furthermore, under recent law changes, unused 529 funds can be converted (rolled over) into a Roth IRA for the beneficiary, up to a lifetime limit, giving you a powerful way to jumpstart their retirement savings without penalty. However, please note the IRS requires that the 529 account must have been open and maintained for at least 15 years before this rollover can occur.</p>
+        </div>
+        <div>
+            <a href="where-to-invest.html" class="btn-back">Back</a>
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+    <div style="text-align: center; padding: 2rem 0; width: 100%;">
+        <p class="chrome-text" style="font-size: 1.1rem; margin-bottom: 0.5rem; letter-spacing: 1px;">Contact</p>
+        <a href="#" class="contactLink_footer chrome-text" style="text-decoration: underline; color: #cbd5e1; font-size: 1.1rem; cursor: pointer;">Email Me</a>
+        <canvas class="footerPhoneCanvas" width="250" height="40" style="margin: 0.5rem auto 0; display: block;"></canvas>
+        <script>
+            // Bot-protected email
+            document.querySelectorAll('.contactLink_footer').forEach(function(link) {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    var u = 'dave';
+                    var d = 'zbonski.com';
+                    window.location.href = 'mailto:' + u + '@' + d;
+                });
+            });
+            // Canvas phone number rendering
+            document.querySelectorAll('.footerPhoneCanvas').forEach(function(c) {
+                if (c.dataset.rendered) return;
+                const x = c.getContext('2d');
+                x.font = '700 22px Cinzel, serif';
+                let g = x.createLinearGradient(0, 0, c.width, 0);
+                g.addColorStop(0, "#ffffff");
+                g.addColorStop(0.25, "#f1f5f9");
+                g.addColorStop(0.5, "#ffffff");
+                g.addColorStop(0.75, "#e2e8f0");
+                g.addColorStop(1, "#ffffff");
+                x.fillStyle = g;
+                x.textAlign = 'center';
+                x.textBaseline = 'middle';
+                x.shadowColor = 'rgba(255, 255, 255, 0.2)';
+                x.shadowBlur = 6;
+                x.fillText('865 - 855 - 4555', c.width/2, c.height/2);
+                c.dataset.rendered = "true";
+            });
+        </script>
+    </div>
+    <footer id="disclosures-footer" style="margin-top: 4rem; padding: 1.5rem 0; width: 100%; text-align: center; background: transparent;">
+        <a href="disclosures.html" style="font-size: 0.8rem; color: #94a3b8; text-decoration: none; font-family: 'Inter', sans-serif; letter-spacing: 1px; transition: color 0.3s ease;">Disclosures</a>
+        <span style="font-size: 0.8rem; color: #94a3b8; margin: 0 10px;">|</span>
+        <a href="privacy.html" style="font-size: 0.8rem; color: #94a3b8; text-decoration: none; font-family: 'Inter', sans-serif; letter-spacing: 1px; transition: color 0.3s ease;">Privacy Policy</a>
+    </footer>
+</body>
+</html>
